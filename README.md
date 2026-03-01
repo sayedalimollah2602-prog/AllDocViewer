@@ -1,6 +1,7 @@
 # Draftly - All-in-One Document Viewer
 
-![Draftly Banner](assets/banner.png)
+<img width="569" height="289" alt="banner" src="https://github.com/user-attachments/assets/514af264-7834-430b-8e7f-85f42c15067f" />
+
 
 **Draftly** is a modern and powerful Android application designed to provide a seamless document viewing experience. Whether it's a critical business report, a complex spreadsheet, or a creative presentation, Draftly ensures you can access and view your documents with ease and speed.
 
