@@ -1,16 +1,17 @@
 # Draftly - All-in-One Document Viewer
 
-<img width="569" height="289" alt="banner" src="https://github.com/user-attachments/assets/514af264-7834-430b-8e7f-85f42c15067f" />
-
+![Draftly Banner](assets/banner.png)
 
 **Draftly** is a modern and powerful Android application designed to provide a seamless document viewing experience. Whether it's a critical business report, a complex spreadsheet, or a creative presentation, Draftly ensures you can access and view your documents with ease and speed.
 
 ## 🚀 Key Features
 
 -   **Wide Format Support**: Seamlessly view PDF, Microsoft Word (DOC/DOCX), Excel (XLS/XLSX), and PowerPoint (PPT/PPTX) files.
--   **Modern UI/UX**: Built entirely with **Jetpack Compose**, featuring a clean, responsive, and intuitive Material 3 design.
+-   **Image to PDF Converter**: Convert multiple images from your gallery into a single, high-quality A4 PDF with a custom file name.
+-   **Modern Storage API**: Uses the **MediaStore API** to save generated documents directly to the public `Documents` folder, ensuring compatibility with Android 10+ and instant visibility in file managers.
+-   **Modern UI/UX**: Built entirely with **Jetpack Compose**, featuring a clean, responsive, and intuitive Material 3 design with an interactive **expandable FAB** for quick actions.
 -   **High Performance**: Optimized document loading using the **Apache POI** engine for office documents and native PDF rendering.
--   **Deep Integration**: Handles document viewing requests from other apps (Email, File Managers, etc.).
+-   **Deep Integration**: Handles document viewing requests from other apps (Email, File Managers, etc.) and provides easy **Share** and **Open** actions for created files.
 -   **Recent Files**: Quickly pick up where you left off with a persistent history of recently opened documents.
 -   **Dark Mode**: A beautiful dark theme that’s easy on the eyes.
 -   **Privacy Focused**: Works entirely on-device with no external server processing of your documents.

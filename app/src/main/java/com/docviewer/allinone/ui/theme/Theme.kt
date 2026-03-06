@@ -13,14 +13,14 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val LightColorScheme = lightColorScheme(
-    primary = PurplePrimary,
+    primary = BluePrimary,
     onPrimary = Color.White,
-    primaryContainer = PurpleLight.copy(alpha = 0.3f),
-    onPrimaryContainer = PurpleDark,
-    secondary = BlueAccent,
+    primaryContainer = BlueLight.copy(alpha = 0.3f),
+    onPrimaryContainer = BlueDark,
+    secondary = CyanAccent,
     onSecondary = Color.White,
-    secondaryContainer = BlueAccent.copy(alpha = 0.15f),
-    onSecondaryContainer = BlueAccent,
+    secondaryContainer = CyanAccent.copy(alpha = 0.15f),
+    onSecondaryContainer = CyanAccent,
     background = LightBackground,
     onBackground = LightOnBackground,
     surface = LightSurface,
@@ -32,14 +32,14 @@ private val LightColorScheme = lightColorScheme(
 )
 
 private val DarkColorScheme = darkColorScheme(
-    primary = PurpleLight,
+    primary = BlueLight,
     onPrimary = Color.Black,
-    primaryContainer = PurplePrimary.copy(alpha = 0.3f),
-    onPrimaryContainer = PurpleLight,
-    secondary = BlueAccent,
+    primaryContainer = BluePrimary.copy(alpha = 0.3f),
+    onPrimaryContainer = BlueLight,
+    secondary = CyanAccent,
     onSecondary = Color.Black,
-    secondaryContainer = BlueAccent.copy(alpha = 0.2f),
-    onSecondaryContainer = BlueAccent,
+    secondaryContainer = CyanAccent.copy(alpha = 0.2f),
+    onSecondaryContainer = CyanAccent,
     background = DarkBackground,
     onBackground = DarkOnBackground,
     surface = DarkSurface,

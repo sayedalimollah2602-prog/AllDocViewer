@@ -2,39 +2,40 @@ package com.docviewer.allinone.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Light Theme Colors
-val PurplePrimary = Color(0xFF7C4DFF)
-val PurpleLight = Color(0xFFB388FF)
-val PurpleDark = Color(0xFF651FFF)
-val BlueAccent = Color(0xFF448AFF)
+// ── Blue Primary Palette ──
+val BluePrimary = Color(0xFF2979FF)
+val BlueLight = Color(0xFF82B1FF)
+val BlueDark = Color(0xFF2962FF)
+val CyanAccent = Color(0xFF00B0FF)
 
-val LightBackground = Color(0xFFF8F9FE)
+// ── Light Theme Colors ──
+val LightBackground = Color(0xFFF5F7FF)
 val LightSurface = Color(0xFFFFFFFF)
-val LightSurfaceVariant = Color(0xFFF0EDF6)
-val LightOnBackground = Color(0xFF1C1B1F)
-val LightOnSurface = Color(0xFF1C1B1F)
-val LightOnSurfaceVariant = Color(0xFF49454F)
-val LightOutline = Color(0xFFE8E0F0)
+val LightSurfaceVariant = Color(0xFFECF0F6)
+val LightOnBackground = Color(0xFF0D1B2A)
+val LightOnSurface = Color(0xFF0D1B2A)
+val LightOnSurfaceVariant = Color(0xFF546E7A)
+val LightOutline = Color(0xFFD6E0F0)
 
-// Dark Theme Colors
-val DarkBackground = Color(0xFF121218)
-val DarkSurface = Color(0xFF1E1E2A)
-val DarkSurfaceVariant = Color(0xFF2A2A3C)
-val DarkOnBackground = Color(0xFFE6E1E5)
-val DarkOnSurface = Color(0xFFE6E1E5)
-val DarkOnSurfaceVariant = Color(0xFFCAC4D0)
-val DarkOutline = Color(0xFF3A3A4C)
+// ── Dark Theme Colors ──
+val DarkBackground = Color(0xFF0F1318)
+val DarkSurface = Color(0xFF1A1F2B)
+val DarkSurfaceVariant = Color(0xFF242A38)
+val DarkOnBackground = Color(0xFFE0E6ED)
+val DarkOnSurface = Color(0xFFE0E6ED)
+val DarkOnSurfaceVariant = Color(0xFFA0AEC0)
+val DarkOutline = Color(0xFF2E3546)
 
-// Document Type Colors
-val PdfColor = Color(0xFFE53935)
-val DocColor = Color(0xFF1E88E5)
-val XlsColor = Color(0xFF43A047)
-val PptColor = Color(0xFFFF8F00)
-val TxtColor = Color(0xFF607D8B)
-val CsvColor = Color(0xFF00897B)
-val ImageColor = Color(0xFF9C27B0)
-val UnknownColor = Color(0xFF757575)
+// ── Document Type Colors ──
+val PdfColor = Color(0xFFFF5252)
+val DocColor = Color(0xFF448AFF)
+val XlsColor = Color(0xFF69F0AE)
+val PptColor = Color(0xFFFFAB40)
+val TxtColor = Color(0xFF80CBC4)
+val CsvColor = Color(0xFF26A69A)
+val ImageColor = Color(0xFFCE93D8)
+val UnknownColor = Color(0xFF90A4AE)
 
-// Gradient Colors
-val GradientStart = Color(0xFF7C4DFF)
-val GradientEnd = Color(0xFF448AFF)
+// ── Gradient Colors ──
+val GradientStart = Color(0xFF2979FF)
+val GradientEnd = Color(0xFF00B0FF)

@@ -26,80 +26,74 @@ import com.docviewer.allinone.ui.viewmodel.RecentViewModel
 
 @Composable
 fun RecentScreen(
-    onFileSelected: (android.net.Uri) -> Unit,
-    viewModel: RecentViewModel = viewModel()
+        onFileSelected: (android.net.Uri) -> Unit,
+        viewModel: RecentViewModel = viewModel()
 ) {
     val recentFiles by viewModel.recentFiles.collectAsState()
     var showClearDialog by remember { mutableStateOf(false) }
 
     if (showClearDialog) {
         AlertDialog(
-            onDismissRequest = { showClearDialog = false },
-            title = { Text("Clear History") },
-            text = { Text("Are you sure you want to clear all recent files?") },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        viewModel.clearHistory()
-                        showClearDialog = false
-                    }
-                ) {
-                    Text("Clear", color = MaterialTheme.colorScheme.error)
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showClearDialog = false }) {
-                    Text("Cancel")
-                }
-            },
-            shape = RoundedCornerShape(20.dp)
+                onDismissRequest = { showClearDialog = false },
+                title = { Text("Clear History") },
+                text = { Text("Are you sure you want to clear all recent files?") },
+                confirmButton = {
+                    TextButton(
+                            onClick = {
+                                viewModel.clearHistory()
+                                showClearDialog = false
+                            }
+                    ) { Text("Clear", color = MaterialTheme.colorScheme.error) }
+                },
+                dismissButton = {
+                    TextButton(onClick = { showClearDialog = false }) { Text("Cancel") }
+                },
+                shape = RoundedCornerShape(20.dp)
         )
     }
 
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(
-            start = 20.dp,
-            end = 20.dp,
-            top = 12.dp,
-            bottom = 100.dp
-        ),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+            modifier = Modifier.fillMaxSize(),
+            contentPadding =
+                    PaddingValues(start = 20.dp, end = 20.dp, top = 12.dp, bottom = 100.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         // Header
         item {
             Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 8.dp, bottom = 8.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
+                    modifier = Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 8.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     Text(
-                        text = "Recent",
-                        style = MaterialTheme.typography.displayMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onBackground
+                            text = "Recent",
+                            style = MaterialTheme.typography.displayMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onBackground
                     )
                     Text(
-                        text = "${recentFiles.size} files",
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                            text = "${recentFiles.size} files",
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
 
                 if (recentFiles.isNotEmpty()) {
                     FilledTonalIconButton(
-                        onClick = { showClearDialog = true },
-                        colors = IconButtonDefaults.filledTonalIconButtonColors(
-                            containerColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.6f)
-                        )
+                            onClick = { showClearDialog = true },
+                            colors =
+                                    IconButtonDefaults.filledTonalIconButtonColors(
+                                            containerColor =
+                                                    MaterialTheme.colorScheme.errorContainer.copy(
+                                                            alpha = 0.6f
+                                                    )
+                                    )
                     ) {
                         Icon(
-                            Icons.Rounded.DeleteOutline,
-                            contentDescription = "Clear history",
-                            tint = MaterialTheme.colorScheme.error
+                                Icons.Rounded.DeleteOutline,
+                                contentDescription = "Clear history",
+                                tint = MaterialTheme.colorScheme.error
                         )
                     }
                 }
@@ -110,51 +104,51 @@ fun RecentScreen(
         if (recentFiles.isEmpty()) {
             item {
                 Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 56.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 56.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     Box(
-                        modifier = Modifier
-                            .size(80.dp)
-                            .clip(CircleShape)
-                            .background(
-                                Brush.linearGradient(
-                                    colors = listOf(
-                                        GradientStart.copy(alpha = 0.1f),
-                                        GradientEnd.copy(alpha = 0.1f)
-                                    )
-                                )
-                            ),
-                        contentAlignment = Alignment.Center
+                            modifier =
+                                    Modifier.size(80.dp)
+                                            .clip(CircleShape)
+                                            .background(
+                                                    Brush.linearGradient(
+                                                            colors =
+                                                                    listOf(
+                                                                            GradientStart.copy(
+                                                                                    alpha = 0.1f
+                                                                            ),
+                                                                            GradientEnd.copy(
+                                                                                    alpha = 0.1f
+                                                                            )
+                                                                    )
+                                                    )
+                                            ),
+                            contentAlignment = Alignment.Center
                     ) {
                         Icon(
-                            Icons.Rounded.History,
-                            contentDescription = null,
-                            modifier = Modifier.size(40.dp),
-                            tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)
+                                Icons.Rounded.History,
+                                contentDescription = null,
+                                modifier = Modifier.size(40.dp),
+                                tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)
                         )
                     }
                     Text(
-                        text = "No recent files",
-                        style = MaterialTheme.typography.titleMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                            text = "No recent files",
+                            style = MaterialTheme.typography.titleMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Text(
-                        text = "Files you open will appear here",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                            text = "Files you open will appear here",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
                     )
                 }
             }
         } else {
             items(recentFiles, key = { it.uri.toString() }) { file ->
-                FileCard(
-                    file = file,
-                    onClick = { onFileSelected(file.uri) }
-                )
+                FileCard(file = file, onClick = { onFileSelected(file.uri) })
             }
         }
     }
